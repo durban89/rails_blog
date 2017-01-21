@@ -11,6 +11,10 @@ class ArticlesController < ApplicationController
 		@article = Article.new   
   end
 
+  def edit
+		@article = Article.find(params[:id])
+  end
+
   def create
     #@article = Article.new(params[:article]).permit(:title, :text)
     #@article = Article.new(params.require(:article).permit(:title, :text))
